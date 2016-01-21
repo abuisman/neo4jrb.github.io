@@ -97,7 +97,7 @@ title: 'Neo4j.rb: (ruby)-[:LOVES]-(neo4j)'
                 li Windows: #{link_to 'Rails installer', 'http://railsinstaller.org/en'}
 
           .col-sm-6
-            h4 Neo4j
+            h4 Neo4jclass
             p
               | New to Neo4j? #{link_to 'Try Neo4j in your browser!', 'http://console.neo4j.org/'}
             p
@@ -133,8 +133,8 @@ title: 'Neo4j.rb: (ruby)-[:LOVES]-(neo4j)'
                 property :name
                 property :age, type: Integer
 
-                has_many :out, :friends, type: :friends_with, class_name: 'User'
-                has_one :in,   :github_profile, type: :linked_to  # class_name: 'GithubProfile' assumed
+                has_many :out, :friends, type: :friends_with, model_class: 'User'
+                has_one :in,   :github_profile, type: :linked_to  # model_class: 'GithubProfile' assumed
               end
             ```
 
